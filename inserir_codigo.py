@@ -66,11 +66,11 @@ saida_pdf = r"C:\Projetos\saida_com_codigo.pdf"
 # Nome da impressora de rede
 impressora = r"\\ESCRITORIO-PC\HP LaserJet Professional M1132 MFP"
 
-#try:
+try:
     # Define a impressora temporariamente como padrão
-#    win32print.SetDefaultPrinter(impressora)
-#    # Envia o PDF para a impressora
-#    win32api.ShellExecute(0, "print", saida_pdf, None, ".", 0)
-#    print(f"PDF enviado para a impressora: {impressora}")
-#except Exception as e:
-#    print(f"Erro ao imprimir: {e}")
+    win32print.SetDefaultPrinter(impressora)
+    # Envia o PDF para a impressora
+    win32api.ShellExecute(0, "print", saida_pdf, None, ".", 0)
+    print(f"PDF enviado para a impressora: {impressora}")
+except Exception as e:
+    print(f"Erro ao imprimir: {e}")

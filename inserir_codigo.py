@@ -23,8 +23,8 @@ print(f"Processando arquivo: {entrada_pdf}")
 with pdfplumber.open(entrada_pdf) as pdf:
     texto_total = "\n".join(page.extract_text() or '' for page in pdf.pages)
 
-match = re.search(r"Pedido Nº:\s*(\d+)", texto_total)
-pedido_num = match.group(1) if match else "0000000"
+match = re.search(r"(?i)pedido\s*(n[º°]|\bnro\b|number)\s*:\s*(\d+)", texto_total)
+pedido_num = match.group(2) if match else "0000000"
 print(f"Número do pedido encontrado: {pedido_num}")
 
 # --- 3. Abrir PDF original ---

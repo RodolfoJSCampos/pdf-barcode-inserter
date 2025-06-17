@@ -49,6 +49,15 @@ C:\Projetos
 
 3. Configurando o PDFCreator:
 Criar perfil com os seguinte parâmetros,
+
+Salvar:
+Automático
+Nome do arquivo:
+pedido_<Counter>.pdf
+Target directory:
+C:\PDFCreator\temp
+
+Ações:
 Program File:
 C:\PDFCreator\executar_script.bat
 Additional Program Parameters:

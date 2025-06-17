@@ -50,6 +50,15 @@ C:\Projetos
 
 3. Configure PDFCreator:
 Create a profile with the following parameters:
+
+Save:
+Automatic
+Filename:
+pedido_<Counter>.pdf
+Target directory:
+C:\PDFCreator\temp
+
+Actions:
 Program File:
 C:\PDFCreator\executar_script.bat
 Additional Program Parameters:
